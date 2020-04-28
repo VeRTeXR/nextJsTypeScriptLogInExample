@@ -1,0 +1,29 @@
+{
+  "name": "next-graphql-react-example",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "apollo-link-context": "^1.0.20",
+    "apollo-upload-client": "^13.0.0",
+    "cookie": "^0.4.1",
+    "cross-fetch": "^3.0.4",
+    "graphql": "^15.0.0",
+    "graphql-react": "^9.0.0",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "latest",
+    "next-graphql-react": "^5.0.0",
+    "prop-types": "latest",
+    "react": "^16.12.0",
+    "react-apollo": "^3.1.5",
+    "react-dom": "^16.12.0",
+    "graphql-tag": "latest"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "devDependencies": {
+    "apollo-boost": "^0.4.7"
+  }
+}
