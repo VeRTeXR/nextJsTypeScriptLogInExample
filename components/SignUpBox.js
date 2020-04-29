@@ -30,7 +30,7 @@ class SignUpBox extends react.Component {
   onSubmit = (e) => {
     e.preventDefault()
 
-    let {email, password} = this.elms
+    let {displayName, email, password} = this.elms
     const { router: { query: { next, asNext } } } = this.props
     let addNext = next ? `?next=${encodeURIComponent(next)}`: ``
     addNext += asNext ? `&asNext=${encodeURIComponent(asNext)}`: ``
@@ -42,6 +42,7 @@ class SignUpBox extends react.Component {
       variables: {
         input: {
           user: {
+            displayName: displayName.value, 
             email: this.email,
             password: password.value
           }
@@ -91,6 +92,10 @@ class SignUpBox extends react.Component {
         <h2 className={`text-center text-md-left`}>{`Register`}</h2>
 
         <form onSubmit={this.onSubmit}>
+        <div className={`mb-3 mt-4`}>
+            <input name="displayName" type="text" className={`form-control ${invalidClass(errors.displayName)}`} placeholder={`Display Name`} maxLength="200" required ref={node => {elms.displayName = node}} />
+            {invalidFeedback(errors.displayName)}
+          </div>
         <div className={`mb-3`}>
             <input type="email" className={`form-control ${invalidClass(errors.email)}`} placeholder={`Email Address`} maxLength="200" required ref={node => {elms.email = node}} />
             {invalidFeedback(errors.email)}

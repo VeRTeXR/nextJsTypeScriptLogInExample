@@ -1,4 +1,3 @@
-import { withTranslation } from 'react-i18next'
 import { withRouter } from 'next/router'
 
 import queryString from 'query-string'
@@ -7,7 +6,7 @@ import Link from 'next/link'
 import Layout from '../../components/Layout'
 
 
-export default withTranslation()(withRouter(({ t, router: { asPath, query } }) => {
+export default withRouter(({ t, router: { asPath, query } }) => {
 
   const xQuery = queryString.parse(asPath.split('?')[1])
   if (!query.next && xQuery) {
@@ -22,7 +21,7 @@ export default withTranslation()(withRouter(({ t, router: { asPath, query } }) =
       <div className={`sign-box sign-up-complete-box`}>
         <div className={`full-part`}>
           <div >
-            <h2 className={`text-center mb-4`}>{t(`Your registration has been completed.`)}</h2>
+            <h2 className={`text-center mb-4`}>{`Your registration has been completed.`}</h2>
             {/* <p>
               {t(`To ensure that our mailing list contains only those who wish to be on it, we have sent a confirmation link to your email address.`)}
             </p>
@@ -32,7 +31,7 @@ export default withTranslation()(withRouter(({ t, router: { asPath, query } }) =
           </div>
           <div className={`text-center`}>
             <Link prefetch href={`/sign-in?email=${query.email}${addNext}`}>
-              <a className={`btn btn-primary`}>{t(`Login`)}</a>
+              <a className={`btn btn-primary`}>{`Login`}</a>
             </Link>
           </div>
         </div>
@@ -49,4 +48,4 @@ export default withTranslation()(withRouter(({ t, router: { asPath, query } }) =
       </div>
     </Layout>
   )
-}))
+})
