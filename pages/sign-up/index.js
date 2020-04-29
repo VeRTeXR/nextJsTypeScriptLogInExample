@@ -1,4 +1,3 @@
-import { withTranslation } from 'react-i18next'
 import { withApollo } from 'react-apollo'
 import { withRouter } from 'next/router'
 
@@ -39,7 +38,7 @@ class SignUp extends react.Component {
     return (
       <div>
         <Head>
-          <title>{t(`Register`)}</title>
+          <title>{`Register`}</title>
           <meta charSet='utf-8' />
           <meta name='viewport' content='initial-scale=1.0, width=device-width' />
           <link rel="shortcut icon" href="/static/frontend/img/favicon.ico" type="image/x-icon" />
@@ -50,7 +49,7 @@ class SignUp extends react.Component {
             <SignUpBox />
           }
           secondSection={
-            <SignRelatedBox boxPosition="right" relatedText={t(`Hey! I have an account.`)} linkHref={`/sign-in${addNext}`} linkText={t(`Login`)} />
+            <SignRelatedBox boxPosition="right" relatedText={`Hey! I have an account.`} linkHref={`/sign-in${addNext}`} linkText={`Login`} />
           }
         />
       </div>
@@ -58,4 +57,4 @@ class SignUp extends react.Component {
   }
 }
 
-export default withRouter(withTranslation()(withApollo(connect(({ loggedInUser }) => ({ loggedInUser }))(SignUp))))
+export default withRouter(withApollo(connect(({ loggedInUser }) => ({ loggedInUser }))(SignUp)))

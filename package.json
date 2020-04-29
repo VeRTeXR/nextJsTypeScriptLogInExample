@@ -5,18 +5,20 @@
   "dependencies": {
     "apollo-link-context": "^1.0.20",
     "apollo-upload-client": "^13.0.0",
+    "atob": "latest",
     "cookie": "^0.4.1",
     "cross-fetch": "^3.0.4",
     "graphql": "^15.0.0",
     "graphql-react": "^9.0.0",
+    "graphql-tag": "latest",
     "isomorphic-unfetch": "^3.0.0",
+    "moment": "^2.24.0",
     "next": "latest",
     "next-graphql-react": "^5.0.0",
     "prop-types": "latest",
     "react": "^16.12.0",
     "react-apollo": "^3.1.5",
-    "react-dom": "^16.12.0",
-    "graphql-tag": "latest"
+    "react-dom": "^16.12.0"
   },
   "scripts": {
     "dev": "next",
@@ -24,6 +26,9 @@
     "start": "next start"
   },
   "devDependencies": {
-    "apollo-boost": "^0.4.7"
+    "apollo-boost": "^0.4.7",
+    "btoa": "^1.2.1",
+    "dateformat": "^3.0.3",
+    "react-waterfall": "^4.0.4"
   }
 }
